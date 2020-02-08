@@ -13,7 +13,7 @@ def show_courses(request):
     
     all_courses = Course.objects.all()
     
-    if search_form.data request.GET.get('search_terms'):
+    if request.GET.get('search_terms'):
         all_courses = all_courses.filter(title__contains=request.GET.get('search_terms'))
     
     if request.GET.get('min_cost'):
