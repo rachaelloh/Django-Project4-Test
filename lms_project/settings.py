@@ -25,7 +25,7 @@ SECRET_KEY = '*c_df7xf3ce4v5u!xz1f#hl&5@7097us@wc%50kxijhk*8@qdu'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ["lzq-django-test.herokuapp.com/", "*"]
 
 
 # Application definition
@@ -133,6 +133,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIR = [
     os.path.join(BASE_DIR, 'static')
     ]
+    
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     
 UPLOADCARE_PUBLIC_KEY = os.environ['UPLOADCARE_PUBLIC_KEY']
 UPLOADCARE_SECRET_KEY = os.environ['UPLOADCARE_SECRET_KEY']
